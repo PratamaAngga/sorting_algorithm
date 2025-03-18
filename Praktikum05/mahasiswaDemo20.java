@@ -34,6 +34,10 @@ public class mahasiswaDemo20 {
         list.selection();
         list.tampil();
 
+        System.out.println("Data mahasiswa setelah INSERTION sorting berdasarkan IPK (DESC) : ");
+        list.insertion();
+        list.tampil();
+
         sc.close();
     }
 }
