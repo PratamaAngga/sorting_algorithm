@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class mahasiswa20 {
     String nim;
     String nama;

@@ -1,6 +1,10 @@
 public class mahasiswaPrestasi20 {
-    mahasiswa20 listMhs[] = new mahasiswa20[5];
+    mahasiswa20 listMhs[];
     int idx;
+
+    mahasiswaPrestasi20(int jumlah) {
+        listMhs = new mahasiswa20[jumlah];
+    }
 
     void tambah (mahasiswa20 m){
         if (idx<listMhs.length) {
@@ -27,6 +31,20 @@ public class mahasiswaPrestasi20 {
                     listMhs[j-1]=tmp;
                 }
             }
+        }
+    }
+
+    void selection(){
+        for (int i=0; i<listMhs.length-1; i++){
+            int idxMin=i;
+            for (int j=i+1; j<listMhs.length; j++){
+                if (listMhs[j].ipk<listMhs[idxMin].ipk) {
+                    idxMin=j;
+                }
+            }
+            mahasiswa20 tmp = listMhs[idxMin];
+            listMhs[idxMin] = listMhs[i];
+            listMhs[i] = tmp;
         }
     }
 }
